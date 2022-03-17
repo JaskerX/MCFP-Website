@@ -12,10 +12,30 @@ body {
     float: right;
     margin-top: 10%;
     margin-right: 10%;
-    width: 150px;
+    width: 200px;
 }
 
 #indexInput {
     outline: none;
-    border: none;
+    height: 30px;
+    font-size: 17px;
+    width: 188px;
+    padding: 0px;
+    position: absolute;
+    border-color: gray;
+    border-radius: 3px;
+    border-width: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#overlappingDivInput {
+    height: 32px;
+    width: 200px;
+    background-color: #00c5e5;
+    opacity: 50%;
+    pointer-events: none;
+    border-color: transparent;
+    border-radius: 3px;
+    border-width: 1px;
 }

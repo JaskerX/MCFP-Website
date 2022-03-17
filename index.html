@@ -14,7 +14,8 @@
         <div id="indexTextHolder">
             <h3>Überschrift</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            <input id="indexInput" placeholder="Text eingeben">
+            <input id="indexInput" onmouseover="slideOverlay(true)"  onmouseout="slideOverlay(false)" onfocusin="slideOverlay(false)" onfocusout="slideOverlay(true)" placeholder="Text eingeben">
+            <div id="overlappingDivInput"></div>
         </div>
     </body>
 </html>
