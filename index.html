@@ -11,9 +11,9 @@
     </head>
 
     <body>
-        <img onclick="openMenu()" src="pictures/menu-open-icon.svg">
+        <img onclick="openMenu()" class="menuImg" src="pictures/menu-open-icon.svg">
         <div id="menu">
-            <img id="closeIcon" onclick="closeMenu()" src="pictures/menu-close-icon.svg">
+            <img id="closeIcon" class="menuImg" onclick="closeMenu()" src="pictures/menu-close-icon.svg">
             <p id="menuInfo">Menü</p>
             <div id="placeholderMenu"></div>
             <a href="discord-server.html" style="text-decoration: none; color: black;"><p class="menuItem" onmouseover="moveMenuItemRight(this)" onmouseout="moveMenuItemLeft(this)" onfocusin="moveMenuItemRight(this)" onfocusout="moveMenuItemLeft(this)">Discord Server</p></a>
@@ -32,5 +32,9 @@
                 <p id="enterText">OK</p>
             </div>
         </div>
+        <footer>
+            <img id="footerLogo" src="pictures/logo-mcfp-round.png">
+            <p id="footerText">Minecraft Film Projekt</p>
+        </footer>
     </body>
 </html>
