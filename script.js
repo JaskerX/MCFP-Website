@@ -41,7 +41,7 @@ function slideOverlay(off, isOverlay) {
 }
 
 function doSth() {
-    alert("yes");
+    
 }
 
 function isFinishedTrue() {
