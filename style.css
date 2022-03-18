@@ -19,23 +19,38 @@ body {
     outline: none;
     height: 30px;
     font-size: 17px;
-    width: 188px;
+    width: 144px;
     padding: 0px;
     position: absolute;
     border-color: gray;
-    border-radius: 3px;
-    border-width: 1px;
-    padding-left: 5px;
+    border-radius: 15px;
+    border-width: 0px;
+    padding-left: 31px;
     padding-right: 5px;
+    transition: all 0.3s ease;
 }
 
 #overlappingDivInput {
-    height: 32px;
-    width: 200px;
+    height: 30px;
+    width: 30px;
     background-color: #00c5e5;
-    opacity: 50%;
     pointer-events: none;
+    opacity: 100%;
     border-color: transparent;
-    border-radius: 3px;
-    border-width: 1px;
+    border-radius: 15px;
+    border-width: 0px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+}
+
+#enterText {
+    color: black;
+    text-shadow: 0 0 5px white;
+    opacity: 0%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    margin: auto;
 }
