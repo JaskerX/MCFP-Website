@@ -10,7 +10,7 @@ body {
 
 #indexTextHolder {
     float: right;
-    margin-top: 10%;
+    margin-top: 150px;
     margin-right: 10%;
     width: 200px;
 }
@@ -44,13 +44,83 @@ body {
     cursor: pointer;
     display: flex;
 }
+#overlappingDivInput:hover {
+    background-color: #00b0e5;
+}
 
 #enterText {
     color: black;
     text-shadow: 0 0 5px white;
     opacity: 0%;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     margin: auto;
+}
+
+img {
+    float: right;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+#menu {
+    float: right;
+    height: 100%;
+    width: 0px;
+    background-color: white;
+    opacity: 20%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: width 0.3s ease-out;
+}
+
+#backgroundMenu {
+    float: left;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s ease-out;
+}
+
+#closeIcon {
+    opacity: 20%;
+}
+
+#placeholderMenu {
+    height: 20px;
+}
+
+.menuItem {
+    font-size: 20px;
+    border-radius: 0;
+    border: solid #00c5e5 2px;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0px 10px 15px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    margin-bottom: 3px;
+}
+
+#menuInfo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
