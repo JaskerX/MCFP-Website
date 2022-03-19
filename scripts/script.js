@@ -1,5 +1,12 @@
 var isFinished = true;
 var leave = false;
+window.onload = prepareSearch();
+var discord;
+var partner;
+var anmeldung;
+var forum;
+var diverses;
+var downloads;
 
 function slideOverlay(off, isOverlay) {
     var div = document.getElementById("overlappingDivInput");
@@ -109,4 +116,23 @@ function moveMenuItemRight(item) {
 function moveMenuItemLeft(item) {
     item.style.paddingLeft = "15px";
     item.style.background = "none";
+}
+
+function prepareSearch() {
+    discord = getPage("discord-server.html");
+    partner = getPage("partner.html");
+    anmeldung = getPage("anmeldung.html");
+    forum = getPage("forum.html");
+    diverses = getPage("diverses.html");
+    downloads = getPage("downloads.html");
+}
+
+function getPage(name) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://raw.githubusercontent.com/jaskerx-mcfp/mcfp-website/master/" + name, false);
+    xmlHttp.send(null);
+    var res = xmlHttp.response;
+    var parser = new DOMParser();
+    var page = parser.parseFromString(res, "text/html");
+    return page;
 }
