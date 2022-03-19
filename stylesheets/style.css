@@ -9,7 +9,11 @@
     padding: 0;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
+}
+
+#backImgHolder {
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -25,6 +29,8 @@ body {
     margin-right: 10%;
     width: 200px;
 }
+
+/* doch nicht benötigt
 
 #indexInput {
     outline: none;
@@ -69,13 +75,34 @@ body {
     font-size: 18px;
     margin: auto;
     user-select: none;
+}*/
+
+#btnEinleitung {
+    height: 30px;
+    width: 150px;
+    background-color: #00c5e5;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding-top: 12px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#btnEinleitung:hover {
+    background-color: #00b0e5;
 }
 
-.menuImg {
-    float: right;
+#menuImg {
+    position: fixed ;
+    margin-left: calc(100vw - 95px);
     width: 75px;
     height: 75px;
     cursor: pointer;
+    z-Index: 2;
 }
 
 #menu {
@@ -106,7 +133,6 @@ body {
 
 #closeIcon {
     opacity: 0%;
-    float: right;
 }
 
 #placeholderMenu {
@@ -158,14 +184,13 @@ body {
     text-shadow: 0 0 3px white;
 }
 
-footer {
+#startFooter {
     float: left;
     height: 50px;
     margin-left: 30px;
-    display: inline;
-    position: fixed;
-    bottom: 20px;
     display: flex;
+    position: block;
+    margin-top: calc(100vh - 70px);
 }
 
 

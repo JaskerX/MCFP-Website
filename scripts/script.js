@@ -1,6 +1,7 @@
 var isFinished = true;
 var leave = false;
-window.onload = prepareSearch();
+var isMenuOpen = false;
+//window.onload = prepareSearch();
 var discord;
 var partner;
 var anmeldung;
@@ -8,16 +9,20 @@ var forum;
 var diverses;
 var downloads;
 
+/* doch nicht benötigt
+
+<input id="indexInput" onmouseover="slideOverlay(true, false)"  onmouseout="leaveTrue(); isFinishedTrue(); slideOverlay(false, false)" onfocusin="slideOverlay(true, false)" onfocusout="leaveTrue(); isFinishedTrue(); slideOverlay(false, false)" placeholder="Text eingeben">
+<div id="overlappingDivInput" onmouseover="leaveFalse(); slideOverlay(true, true)" onmouseout="leaveTrue(); isFinishedTrue(); slideOverlay(false, true)" onclick="doSth();">
+    <p id="enterText">OK</p>
+</div>
+
 function slideOverlay(off, isOverlay) {
     var div = document.getElementById("overlappingDivInput");
     var input = document.getElementById("indexInput");
     var text = document.getElementById("enterText");
 
     if (off) {
-        //if(isOverlay) {
-            text.style.opacity = "100%";
-        //}
-        //input.style.width = "144px";
+        text.style.opacity = "100%";
         input.style.paddingLeft = "5px";
         input.style.paddingRight = "51px";
         div.style.width = "50px";
@@ -49,10 +54,14 @@ function slideOverlay(off, isOverlay) {
             });
         }
     }
+}*/
+
+function scrollEinleitung () {
+    window.scrollTo(0, window.innerHeight);
 }
 
 function doSth() {
-    
+    prepareSearch();
 }
 
 function isFinishedTrue() {
@@ -66,12 +75,23 @@ function leaveFalse() {
     leave = false;
 }
 
+function toggleMenu() {
+    if(isMenuOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+}
+
 function openMenu() {
     var menu = document.getElementById("menu");
     var back = document.getElementById("backgroundMenu");
-    var closeIcon = document.getElementById("closeIcon");
+    //var closeIcon = document.getElementById("closeIcon");
+    var img = document.getElementById("menuImg");
     menu.style.transition = "width 0.3s ease-out";
     back.style.transition = "width 0.3s ease-out";
+
+    isMenuOpen = true;
 
     menu.style.zIndex = 1;
     menu.style.opacity = "100%";
@@ -79,31 +99,39 @@ function openMenu() {
     back.style.zIndex = 1;
     back.style.opacity = "70%";
     back.style.width = "calc(100% - 350px)"
-    closeIcon.style.opacity = "100%";
-    closeIcon.style.zIndex = 1;
+    img.src = "pictures/menu-close-icon.svg"
+    //closeIcon.style.opacity = "100%";
+    //closeIcon.style.zIndex = 1;
 }
 
 function closeMenu() {
     var menu = document.getElementById("menu");
     var back = document.getElementById("backgroundMenu");
-    var closeIcon = document.getElementById("closeIcon");
+    //var closeIcon = document.getElementById("closeIcon");
+    var img = document.getElementById("menuImg");
     menu.style.transition = "width 0.3s ease-in";
     back.style.transition = "width 0.3s ease-in";
+
+    isMenuOpen = false;
 
     menu.addEventListener("transitionend", makeMenuUnvisible);
     menu.style.width = "0px";
     back.style.zIndex = -1;
     back.style.opacity = "0%";
     back.style.width = "100%";
-    closeIcon.style.opacity = "0%";
-    closeIcon.style.zIndex = -1;
+    img.style.opacity = "0%"
+    //closeIcon.style.opacity = "0%";
+    //closeIcon.style.zIndex = -1;
 }
 
 function makeMenuUnvisible(e) {
     if(e.propertyName === "width") {
         var menu = document.getElementById("menu");
+        var img = document.getElementById("menuImg");
         menu.style.zIndex = -1;
         menu.style.opacity = "0%";
+        img.style.opacity = "100%";
+        img.src = "pictures/menu-open-icon.svg"
         menu.removeEventListener("transitionend", makeMenuUnvisible);
     }
 }
@@ -117,6 +145,8 @@ function moveMenuItemLeft(item) {
     item.style.paddingLeft = "15px";
     item.style.background = "none";
 }
+
+/* vielleicht noch benötigt
 
 function prepareSearch() {
     discord = getPage("discord-server.html");
@@ -135,4 +165,4 @@ function getPage(name) {
     var parser = new DOMParser();
     var page = parser.parseFromString(res, "text/html");
     return page;
-}
+}*/
