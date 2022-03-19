@@ -164,8 +164,7 @@ footer {
 @media only screen and (max-width: 767px) {
     #indexTextHolder {
         float: left;
-        margin-top: 20px;
-        margin-left: calc(100vw - 210px);
-        width: 200px;
+        margin-top: 40px;
+        margin-left: calc(100vw - 200px);
     }
 }
