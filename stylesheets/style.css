@@ -98,11 +98,12 @@ html {
 
 #menuImg {
     position: fixed ;
+    right: 0;
     margin-left: calc(100vw - 95px);
     width: 75px;
     height: 75px;
     cursor: pointer;
-    z-Index: 2;
+    z-index: 2;
 }
 
 #menu {
@@ -129,10 +130,6 @@ html {
     left: 0;
     z-index: -1;
     transition: width 0.3s ease-out;
-}
-
-#closeIcon {
-    opacity: 0%;
 }
 
 #placeholderMenu {
