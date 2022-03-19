@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'myFirstFont';
+    font-family: 'Melon Honey';
     src: url('../fonts/melonHoney.ttf');
   }
 
@@ -81,7 +81,6 @@ body {
     right: 0;
     z-index: -1;
     transition: width 0.3s ease-out;
-    overflow-y: scroll;
 }
 
 #backgroundMenu {
@@ -132,7 +131,7 @@ body {
 }
 
 * {
-    font-family: 'myFirstFont';
+    font-family: 'Melon Honey';
 }
 
 #footerLogo {
@@ -166,5 +165,21 @@ footer {
         float: left;
         margin-top: 40px;
         margin-left: calc(100vw - 200px);
+    }
+}
+
+@media only screen and (max-height: 512px) {
+    #menu {
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-height: 375px) {
+    #menu {
+        overflow-y: scroll;
+    }
+
+    #indexTextHolder {
+        margin-top: 0px;
     }
 }
