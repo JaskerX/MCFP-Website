@@ -63,6 +63,8 @@ function openMenu() {
     var menu = document.getElementById("menu");
     var back = document.getElementById("backgroundMenu");
     var closeIcon = document.getElementById("closeIcon");
+    menu.style.transition = "width 0.3s ease-out";
+    back.style.transition = "width 0.3s ease-out";
 
     menu.style.zIndex = 1;
     menu.style.opacity = "100%";
@@ -77,6 +79,8 @@ function closeMenu() {
     var menu = document.getElementById("menu");
     var back = document.getElementById("backgroundMenu");
     var closeIcon = document.getElementById("closeIcon");
+    menu.style.transition = "width 0.3s ease-in";
+    back.style.transition = "width 0.3s ease-in";
 
     menu.addEventListener("transitionend", makeMenuUnvisible);
     menu.style.width = "0px";

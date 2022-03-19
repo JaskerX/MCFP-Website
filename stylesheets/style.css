@@ -15,7 +15,7 @@ body {
 
 #indexTextHolder {
     float: right;
-    margin-top: 10%;
+    margin-top: 150px;
     margin-right: 10%;
     width: 200px;
 }
@@ -124,7 +124,7 @@ body {
     margin-left: 20px;
 }
 
-#header {
+#heading {
     font-size: 20px;
     letter-spacing: 0;
     display: flex;
@@ -157,4 +157,15 @@ footer {
     position: fixed;
     bottom: 20px;
     display: flex;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    #indexTextHolder {
+        float: left;
+        margin-top: 20px;
+        margin-left: calc(100vw - 210px);
+        width: 200px;
+    }
 }
