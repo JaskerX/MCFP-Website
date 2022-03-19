@@ -146,6 +146,17 @@ function moveMenuItemLeft(item) {
     item.style.background = "none";
 }
 
+function scrolled() {
+    var up = document.getElementById("scrollUp");
+    if(window.scrollY > 400) {
+        up.style.opacity = "100%";
+        up.style.pointerEvents = "all";
+    } else {
+        up.style.opacity = "0%";
+        up.style.pointerEvents = "none";
+    }
+}
+
 /* vielleicht noch benötigt
 
 function prepareSearch() {

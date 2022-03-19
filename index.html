@@ -11,7 +11,7 @@
         <title>Willkommen beim MCFP</title>
     </head>
 
-    <body>
+    <body onscroll="scrolled()">
         <div id="backImgHolder">
             <img onclick="toggleMenu()" id="menuImg" src="pictures/menu-open-icon.svg">
             <div id="menu">
@@ -30,6 +30,7 @@
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                 <label id="btnEinleitung" onclick="scrollEinleitung()">Zur Einleitung</label>
             </div>
+            <label id="scrollUp" onclick="window.scrollTo(0, 0);">nach oben</label>
             <div id="startFooter">
                 <img id="footerLogo" src="pictures/logo-mcfp-round.png">
                 <p id="footerText">Minecraft Film Projekt</p>
