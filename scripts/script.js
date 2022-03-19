@@ -73,6 +73,7 @@ function openMenu() {
     back.style.opacity = "70%";
     back.style.width = "calc(100% - 350px)"
     closeIcon.style.opacity = "100%";
+    closeIcon.style.zIndex = 1;
 }
 
 function closeMenu() {
@@ -88,6 +89,7 @@ function closeMenu() {
     back.style.opacity = "0%";
     back.style.width = "100%";
     closeIcon.style.opacity = "0%";
+    closeIcon.style.zIndex = -1;
 }
 
 function makeMenuUnvisible(e) {

@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Melon Honey';
     src: url('../fonts/melonHoney.ttf');
-  }
+}
+
+* {
+    font-family: 'Melon Honey';
+    margin: 0;
+    padding: 0;
+}
 
 body {
     height: 100vh;
@@ -97,11 +103,13 @@ body {
 }
 
 #closeIcon {
-    opacity: 20%;
+    opacity: 0%;
+    float: right;
 }
 
 #placeholderMenu {
-    height: 20px;
+    width: 100%;
+    height: 95px;
 }
 
 .menuItem {
@@ -114,13 +122,15 @@ body {
     user-select: none;
     cursor: pointer;
     transition: all 0.2s ease-out;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 #menuInfo {
+    float: left;
     font-size: 30px;
     font-weight: bold;
     margin-left: 20px;
+    margin-top: 22.5px;
 }
 
 #heading {
@@ -128,10 +138,7 @@ body {
     letter-spacing: 0;
     display: flex;
     white-space: nowrap;
-}
-
-* {
-    font-family: 'Melon Honey';
+    font-weight: bold;
 }
 
 #footerLogo {
@@ -160,7 +167,7 @@ footer {
 
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
     #indexTextHolder {
         float: left;
         margin-top: 40px;
@@ -168,7 +175,7 @@ footer {
     }
 }
 
-@media only screen and (max-height: 512px) {
+@media only screen and (max-height: 422px) {
     #menu {
         overflow-y: scroll;
     }
