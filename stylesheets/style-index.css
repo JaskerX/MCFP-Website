@@ -13,13 +13,14 @@ html {
     scroll-behavior: smooth;
 }
 
-#backImgHolder {
+body {
     height: 100vh;
     margin: 0;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
+    background-attachment: fixed;
     background-image: url("https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 }
 
@@ -232,7 +233,6 @@ html {
 }
 
 @media only screen and (max-height: 400px) {
-
     #indexTextHolder {
         margin-top: 60px;
     }

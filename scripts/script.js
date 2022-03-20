@@ -57,7 +57,11 @@ function slideOverlay(off, isOverlay) {
 }*/
 
 function scrollEinleitung () {
-    window.scrollTo(0, window.innerHeight);
+    //window.scrollTo(0, window.innerHeight);
+    scroll({
+        top: window.innerHeight,
+        behavior: "smooth"
+    })
 }
 
 function doSth() {
@@ -120,6 +124,7 @@ function closeMenu() {
     back.style.opacity = "0%";
     back.style.width = "100%";
     img.style.opacity = "0%"
+    img.style.pointerEvents = "none";
     //closeIcon.style.opacity = "0%";
     //closeIcon.style.zIndex = -1;
 }
@@ -132,6 +137,7 @@ function makeMenuUnvisible(e) {
         menu.style.opacity = "0%";
         img.style.opacity = "100%";
         img.src = "pictures/menu-open-icon.svg"
+        img.style.pointerEvents = "all";
         menu.removeEventListener("transitionend", makeMenuUnvisible);
     }
 }
@@ -148,7 +154,7 @@ function moveMenuItemLeft(item) {
 
 function scrolled() {
     var up = document.getElementById("scrollUp");
-    if(window.scrollY > 400) {
+    if(window.scrollY > 300) {
         up.style.opacity = "100%";
         up.style.pointerEvents = "all";
     } else {
@@ -177,3 +183,12 @@ function getPage(name) {
     var page = parser.parseFromString(res, "text/html");
     return page;
 }*/
+
+
+
+
+
+
+
+
+// Idee: Fortschrittsanzeige (in abgeteilten Segmenten?)
