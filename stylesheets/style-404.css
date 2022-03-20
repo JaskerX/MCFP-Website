@@ -29,7 +29,7 @@ a {
 
 
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 380px) {
     div {
         margin-left: 1px;
         margin-right: 1px;

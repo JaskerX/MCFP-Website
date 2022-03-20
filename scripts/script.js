@@ -56,10 +56,16 @@ function slideOverlay(off, isOverlay) {
     }
 }*/
 
-function scrollEinleitung () {
-    //window.scrollTo(0, window.innerHeight);
+function scrollToSegment (num) {
+    var y = 0;
+    switch (num) {
+        case 0: y = 0;
+            break;
+        case 1: y = window.innerHeight;
+            break;
+    }
     scroll({
-        top: window.innerHeight,
+        top: y,
         behavior: "smooth"
     })
 }

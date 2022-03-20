@@ -9,10 +9,7 @@
     padding: 0;
 }
 
-html, body {
-    scroll-behavior: smooth;
-}
-html:focus-within {
+html {
     scroll-behavior: smooth;
 }
 
@@ -37,7 +34,7 @@ body {
 
 /* doch nicht benötigt
 
-#indexInput {
+#indexInput { input
     outline: none;
     height: 30px;
     font-size: 17px;
@@ -53,7 +50,7 @@ body {
     margin-top: 5px;
 }
 
-#overlappingDivInput {
+#overlappingDivInput { div
     height: 30px;
     width: 30px;
     background-color: #00c5e5;
@@ -72,7 +69,7 @@ body {
     background-color: #00b0e5;
 }
 
-#enterText {
+#enterText { p in div
     color: black;
     text-shadow: 0 0 4px white;
     opacity: 0%;
