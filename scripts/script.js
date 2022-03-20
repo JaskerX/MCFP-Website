@@ -56,7 +56,7 @@ function slideOverlay(off, isOverlay) {
     }
 }*/
 
-function scrollToSegment (num) {
+function scrollToSection(num) {
     var y = 0;
     switch (num) {
         case 0: y = 0;

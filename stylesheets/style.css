@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Melon Honey';
+    src: url('../fonts/melonHoney.ttf');
+}
+
+* {
+    font-family: 'Melon Honey';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btnBlue1 {
+    height: 30px;
+    background-color: #00c5e5;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding-top: 12px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.btnBlue1:hover {
+    background-color: #00b0e5;
+}
+
+.btnBlue2 {
+    cursor: pointer;
+    border: solid #00c5e5;
+    border-width: 2px;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    user-select: none;
+}
+.btnBlue2:hover {
+    background-color: #00b0e5;
+    border-color: #00b0e5;
+}
+
+#menuImg {
+    position: fixed ;
+    right: 0;
+    margin-left: calc(100vw - 95px);
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#menu {
+    float: right;
+    height: 100%;
+    width: 0px;
+    background-color: white;
+    opacity: 20%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: width 0.3s ease-out;
+}
+
+#backgroundMenu {
+    float: left;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s ease-out;
+}
+
+#placeholderMenu {
+    width: 100%;
+    height: 95px;
+}
+
+.menuItem {
+    font-size: 20px;
+    border-radius: 0;
+    border: solid #00c5e5 2px;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0px 10px 15px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    margin-bottom: 10px;
+}
+
+#menuInfo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 22.5px;
+}
+
+#scrollUp {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    right: 20px;
+    bottom: 50px;
+    margin-top: calc(100vh - 50px);
+    text-shadow: 0 0 4px white;
+    opacity: 0%;
+    pointer-events: none;
+}
+
+
+
+@media only screen and (max-height: 422px) {
+    #menu {
+        overflow-y: scroll;
+    }
+}
