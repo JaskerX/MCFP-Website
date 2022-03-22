@@ -1,0 +1,13 @@
+iframe {
+    width: calc(100% - 25px);
+    margin-left: 10px;
+    margin-top: 5px;
+    height: calc(100% - 15px);
+}
+
+@media only screen and (max-width: 900px) {
+    iframe {
+        width: calc(100% - 15px);
+        margin-left: 5px;
+    }
+}

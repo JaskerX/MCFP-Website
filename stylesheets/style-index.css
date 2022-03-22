@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -14,7 +19,7 @@ body {
     margin-top: 150px;
     right: 0;
     margin-right: 15%;
-    width: 200px;
+    width: 240px;
 }
 
 /* doch nicht benötigt
@@ -70,15 +75,6 @@ body {
     margin-left: 25px;
 }
 
-#heading {
-    font-size: 20px;
-    letter-spacing: 0;
-    display: flex;
-    white-space: nowrap;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
 #footerLogo {
     float: left;
     width: 50px;
@@ -102,12 +98,35 @@ body {
     margin-top: calc(100vh - 70px);
 }
 
+#textContainer {
+    float: left;
+    position: absolute;
+    margin-top: calc(100vh + 70px);
+    width: calc(100% - 500px);
+    margin-left: 250px;
+    height: calc(100vh - 70px);
+}
 
+
+
+@media only screen and (max-width: 1000px) {
+    #textContainer {
+        width: calc(100% - 200px);
+        margin-left: 100px;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     #indexTextHolder {
         float: right;
         margin-right: 0%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #textContainer {
+        width: calc(100% - 20px);
+        margin-left: 10px;
     }
 }
 

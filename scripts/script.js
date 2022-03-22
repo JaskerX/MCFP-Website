@@ -66,7 +66,7 @@ function scrollToSection(num) {
     }
     scroll({
         top: y,
-        behavior: "smooth"
+        //behavior: "smooth"
     })
 }
 
@@ -103,6 +103,7 @@ function openMenu() {
 
     isMenuOpen = true;
 
+    back.style.width = "100%";
     menu.style.zIndex = 1;
     menu.style.opacity = "100%";
     menu.style.width = "350px";
@@ -128,7 +129,7 @@ function closeMenu() {
     menu.style.width = "0px";
     back.style.zIndex = -1;
     back.style.opacity = "0%";
-    back.style.width = "100%";
+    back.style.width = "0";
     img.style.opacity = "0%"
     img.style.pointerEvents = "none";
     //closeIcon.style.opacity = "0%";
@@ -160,7 +161,7 @@ function moveMenuItemLeft(item) {
 
 function scrolled() {
     var up = document.getElementById("scrollUp");
-    if(window.scrollY > 300) {
+    if(window.scrollY > 30) {
         up.style.opacity = "100%";
         up.style.pointerEvents = "all";
     } else {
