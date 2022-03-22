@@ -2,19 +2,33 @@
     font-family: 'Melon Honey';
     src: url('../fonts/melonHoney.ttf');
 }
+@font-face {
+    font-family: 'Mangabey';
+    src: url('../fonts/MangabeyRegular-rgqVO.otf');
+}
+@font-face {
+    font-family: 'Bad Comic';
+    src: url('../fonts/BadComic-MVw8P.ttf');
+}
 
 * {
-    font-family: 'Melon Honey';
+    font-family: 'Bad Comic';
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #00c5e5;
+}
+
 .btnBlue1 {
     height: 30px;
+    width: fit-content;
     background-color: #00c5e5;
     border-radius: 30px;
     font-size: 16px;
@@ -23,7 +37,11 @@ html {
     padding-top: 12px;
     user-select: none;
     cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
     transition: all 0.5s ease;
+    text-decoration: none;
+    color: black;
 }
 .btnBlue1:hover {
     background-color: #00b0e5;
@@ -39,6 +57,7 @@ html {
     background-color: transparent;
     transition: all 0.5s ease;
     user-select: none;
+    font-size: 14px;
 }
 .btnBlue2:hover {
     background-color: #00b0e5;
@@ -47,8 +66,9 @@ html {
 
 #menuImg {
     position: fixed ;
+    float: right;
     right: 0;
-    margin-left: calc(100vw - 95px);
+    top: 0;
     width: 75px;
     height: 75px;
     cursor: pointer;
@@ -71,14 +91,13 @@ html {
 #backgroundMenu {
     float: left;
     height: 100%;
-    width: 100%;
+    width: 0;
     background-color: gray;
     opacity: 0%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width 0.3s ease-out;
 }
 
 #placeholderMenu {
@@ -119,10 +138,35 @@ html {
     pointer-events: none;
 }
 
+.contentContainer {
+    width: calc(100vw - 300px);
+    margin-left: 150px;
+    margin-top: 75px;
+    background-color: white;
+    opacity: 90%;
+    height: calc(100vh - 100px);
+}
+
+.heading {
+    font-size: 22px;
+    letter-spacing: 0;
+    display: flex;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 
 
 @media only screen and (max-height: 422px) {
     #menu {
         overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contentContainer {
+        width: calc(100vw - 20px);
+        margin-left: 10px;
     }
 }
