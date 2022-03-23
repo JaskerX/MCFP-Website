@@ -106,7 +106,11 @@ function openMenu() {
     back.style.width = "100%";
     menu.style.zIndex = 1;
     menu.style.opacity = "100%";
-    menu.style.width = "350px";
+    if (window.innerWidth < 350) {
+        menu.style.width = "200px"
+    } else {
+        menu.style.width = "350px";
+    }
     back.style.zIndex = 1;
     back.style.opacity = "70%";
     back.style.width = "calc(100% - 350px)"
