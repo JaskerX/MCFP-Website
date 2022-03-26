@@ -98,10 +98,15 @@ function openMenu() {
     var back = document.getElementById("backgroundMenu");
     //var closeIcon = document.getElementById("closeIcon");
     var img = document.getElementById("menuImg");
+    var items = document.getElementsByClassName("menuItem");
     menu.style.transition = "width 0.3s ease-out";
     back.style.transition = "width 0.3s ease-out";
 
     isMenuOpen = true;
+
+    for(var i = 0; i< items.length; i++) {
+        items[i].classList.add("slidingEl");
+    }
 
     back.style.width = "100%";
     menu.style.zIndex = 1;
@@ -123,11 +128,16 @@ function closeMenu() {
     var menu = document.getElementById("menu");
     var back = document.getElementById("backgroundMenu");
     //var closeIcon = document.getElementById("closeIcon");
+    var items = document.getElementsByClassName("menuItem");
     var img = document.getElementById("menuImg");
     menu.style.transition = "width 0.3s ease-in";
     back.style.transition = "width 0.3s ease-in";
 
     isMenuOpen = false;
+
+    for(var i = 0; i< items.length; i++) {
+        items[i].classList.remove("slidingEl");
+    }
 
     menu.addEventListener("transitionend", makeMenuUnvisible);
     menu.style.width = "0px";
