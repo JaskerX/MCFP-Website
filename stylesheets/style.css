@@ -11,6 +11,11 @@
     src: url('../fonts/BadComic-MVw8P.ttf');
 }
 
+:root {
+    --mcfp-blue: #00c5e5;
+    --second-blue: #00b0e5;
+}
+
 * {
     font-family: 'Bad Comic';
     margin: 0;
@@ -24,13 +29,13 @@ html {
 }
 
 body {
-    background-color: #00c5e5;
+    background-color: var(--mcfp-blue);
 }
 
 .btnBlue1 {
     height: 30px;
     width: fit-content;
-    background-color: #00c5e5;
+    background-color: var(--mcfp-blue);
     border-radius: 30px;
     font-size: 16px;
     text-align: center;
@@ -45,12 +50,12 @@ body {
     color: black;
 }
 .btnBlue1:hover {
-    background-color: #00b0e5;
+    background-color: var(--second-blue);
 }
 
 .btnBlue2 {
     cursor: pointer;
-    border: solid #00c5e5;
+    border: solid var(--mcfp-blue);
     border-width: 2px;
     border-radius: 5px;
     vertical-align: middle;
@@ -61,8 +66,8 @@ body {
     font-size: 14px;
 }
 .btnBlue2:hover {
-    background-color: #00b0e5;
-    border-color: #00b0e5;
+    background-color: var(--second-blue);
+    border-color: var(--second-blue);
 }
 
 #menuImg {
@@ -109,7 +114,7 @@ body {
 .menuItem {
     font-size: 20px;
     border-radius: 0;
-    border: solid #00c5e5 2px;
+    border: solid var(--mcfp-blue) 2px;
     border-left: 0;
     border-right: 0;
     padding: 10px 0px 10px 15px;
