@@ -1,0 +1,7 @@
+body {
+    background-image: linear-gradient(200deg, lightgreen, var(--mcfp-blue));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+}
